@@ -1,0 +1,648 @@
+@import './styles/_config';
+@import './styles/_buttons';
+
+
+//GENERAL
+*{ 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $primaryColor;
+  color: $secondaryColor;
+  line-height: 1.6;
+  height: 100vh;
+}
+
+a.link-text {
+  text-decoration: none !important;
+  color: $secondaryColor;
+  font-family: 'fjallaone', sans-serif;
+  font-size: 1.8rem;
+}
+
+h1 {
+font-family: 'fjallaone', sans-serif;
+font-weight: 100;
+font-size: 6rem;
+padding: 0;
+margin-bottom: -25px;
+
+}
+
+
+h2, .title {
+font-family: 'fjallaone', sans-serif;
+font-weight: 400;
+font-size: 3.8rem;
+}
+
+
+h3, h4, .subtitle {
+  font-family: 'fjallaone', sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+h5, h6, .header-title {
+  font-family: 'fjallaone', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+
+
+p, .text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.text-muted {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  opacity: .7;
+}
+
+.text-muted-title {
+  opacity: .7;
+}
+
+.center {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+
+//MEDIA QUERIES
+@include mediaXs {
+   h1 {
+      font-size: 60px;
+    }
+
+    h2{
+      font-size: 35px;
+    }
+
+        p.title-summary {
+          display: none;
+        }
+
+  .sectionMain {
+
+    .header-section {
+      height: 100vh;
+
+      h1, h2 {
+        border: none !important;
+        text-align: center;
+      }  
+    }
+    
+    .title-summary {
+      max-width: 250px;
+    }
+  }
+
+  .sectionAboutMe {
+    
+    .paragraph {
+      font-size: 16px;
+      margin-top: 2rem !important;
+      padding: 0 2rem !important;
+      
+    }
+
+  }
+  .sectionContactMe {
+
+    .form-wrapper{
+
+      .form {
+
+        input {
+          width: 300px;
+          font-size: 16px;
+        }
+        
+        textarea {
+          width: 300px;
+          font-size: 16px;
+          padding-left: 1rem;
+        }
+        
+        button {
+          width: 300px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include mediaSm {
+    h1 {
+      font-size: 60px;
+    }
+
+    h2{
+      font-size: 35px;
+    }
+
+        p.title-summary {
+          display: none;
+        }
+
+  .sectionMain {
+
+    .header-section {
+      height: 100vh;
+
+      h1, h2 {
+        border: none !important;
+        text-align: center;
+      }  
+    }
+    
+    .title-summary {
+      max-width: 250px;
+    }
+  }
+
+  .sectionAboutMe {
+    
+    .paragraph {
+      font-size: 16px;
+      margin-top: 2rem !important;
+      padding: 0 2rem !important;
+      
+    }
+
+  }
+  .sectionContactMe {
+
+    .form-wrapper{
+
+      .form {
+
+        input {
+          width: 300px;
+          font-size: 16px;
+        }
+        
+        textarea {
+          width: 300px;
+          font-size: 16px;
+        }
+        
+        button {
+          width: 300px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include mediaMd {
+  h1 {
+    font-size: 60px !important;
+  }
+
+  h2, h3 {
+    font-size: 35px !important;
+  }
+
+  h5 {
+    font-size: 35px !important;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+
+  .sectionMain {
+
+    .header-section {
+      height: 100vh;
+
+      h1, h2 {
+        border: none !important;
+        text-align: center;
+      }  
+    }
+    
+    .title-summary {
+      max-width: 250px;
+    }
+  }
+}
+
+
+
+//NAV
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.5rem;
+  z-index: 2;
+  
+  
+    .nav-brand {
+      margin-left: 2rem;
+      margin-top: 15px;
+      display: flex;
+      width: 100vw;
+      justify-content: space-between;
+      text-shadow: 1px 1px 5px $primaryColor;
+
+       .fas:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        @include easeIO; 
+
+        p {
+        @include easeIO;
+        }
+      }
+        p {
+        display: inline;
+        padding-left: 10px;
+        @include easeIO;
+        }
+      
+    }
+    
+
+  }
+
+ //SECOND NAVBAR 
+  .secondary-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background: transparent;
+    color: $secondaryColor;
+
+    ul.nav-links {
+    list-style: none;
+a {
+  text-decoration: none;
+  color: $secondaryColor;
+  text-transform: uppercase;
+     
+    p{
+      font-family: 'fjallaone', sans-serif;
+      font-size: 1.8rem;
+      text-decoration: none;
+      padding-left: 1.2rem;
+      padding-top: 1.2rem;
+      
+    }
+
+    p:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+      color:  $accentColor;
+      @include easeIO;
+    }
+     i {
+       padding-right: .6rem;
+     }
+    i.fas:hover {
+      color:  $accentColor;
+      @include easeIO;
+    }
+}
+   
+
+  }
+      
+
+      }
+
+  
+
+  .title-text {
+  font-style: italic;
+}
+
+.summary-text {
+  margin-bottom: 25px;
+  p {
+    text-align: left;
+    margin: 0 auto;
+    width: 75%;
+    padding: 2rem;
+  }
+}
+
+
+//MAIN SECTION
+.sectionMain {
+  background: url('./styles/img/bgPhoto.jpg') ; 
+  height: 100vh;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+  }
+  
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+     h1 {
+      margin-top: 12vh;
+    }
+
+    h2 {
+      color: $accentColor;
+      padding: 3px; 
+    }
+
+    h1, h2 {
+      border-left: 5px solid #fff;
+      padding-left: 25px;
+    }
+
+    .title-summary-container {
+      text-align: center;
+      padding: 1.2rem;
+      max-width: 500px;
+    }
+
+    .icons {
+      margin-top: 1.2rem;
+      padding-left: 10px;
+
+      .icon-spacing {
+        padding: .6rem;
+        color: inherit;
+        // align-items: center;
+
+          i.fab, i.fas, i.far {
+            &:hover {
+              cursor: pointer;
+              color: $accentColor;
+              transform: scale(1.3);
+              @include easeIO;
+            }      
+          } 
+      }  
+    }
+  }
+}
+
+
+//PROJECTS
+.sectionProjects {
+  height: 100vh;
+  background-color: $secondaryColor;
+  color: $primaryColor;
+  padding-top: 5px;
+  
+  
+    .project-section-title {
+      text-align: center;
+      margin-top: 5vh;
+      margin-bottom: 1rem;  
+    }
+
+    .project-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      color: $secondaryColor;
+      
+      a {
+        text-decoration: none;
+        color: $secondaryColor;
+      }
+     
+      .project1, .project2, .project3 {
+        padding: 5px;
+        height: 65vh;
+        width: 300px;
+        position: relative;
+        bottom: -1rem;
+
+        
+
+        &:hover {
+          @include easeIO;
+          transform: translateY(-15px);
+          border: none;
+          box-shadow: 2px 2px 20px rgba(0,0,0,.3);
+
+        }
+        
+        h5 {
+          padding-top: -1rem;
+          position: relative;
+          top: -.2rem;
+          left: 0;
+          text-transform: uppercase;
+          overflow: hidden;
+
+          &:hover {
+             @include easeIO;
+            overflow: visible;
+          }
+        }  
+      }
+      
+      .project1 {
+        background-image:
+        linear-gradient(to bottom,rgba(131, 208, 242, 0.5), rgba(0, 0, 0, 0.23)), url(./styles/img/GedjetsHomePagePic_ady-teenagerinro.jpg);
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+      }
+      .project2 {
+        background-image:
+          linear-gradient(to bottom,rgba(131, 208, 242, 0.5), rgba(0, 0, 0, 0.23)), url(./styles/img/tshirtWhite.png);
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+      }
+      .project3 {
+        background-image: linear-gradient(to bottom,rgba(131, 208, 242, 0.5), rgba(0, 0, 0, 0.23)), url(./styles/img/max-tarkhov-skateDeck.jpg);
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;        
+      }
+
+    }
+
+    
+  }
+
+//ABOUT ME
+.sectionAboutMe {
+  height: 100vh;
+  // background-image: 
+  // linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+  // url(./styles/img/47680807_10156976939454797_3316410726192513024_n.jpg);
+  // background-repeat: no-repeat; 
+  // background-size: cover;
+  background-color: #f6f5f5;
+  opacity: 1.5;
+  text-align: center;
+  padding: 15px 0;
+ 
+
+   .aboutMe-section-title {
+      color: $primaryColor;
+      text-align: center;
+      margin: 5vh 0;
+      // margin-bottom: 2rem;     
+  }
+
+  .paragraph {
+    text-align: left;
+    padding: 0 4rem;
+    margin-top: 20vh;
+    color: #282c2e;
+
+    span {
+      color: $accentColor;
+      font-style: italic;
+      font-family: 'fjallaone', sans-serif;
+      font-size: 1.2em;
+    }
+  }
+}
+
+//CONTACT ME
+.sectionContactMe {
+  height: 100vh;
+  background-color: $secondaryColor;
+  color: $primaryColor;
+  padding: 5vh 0;
+
+  .contactMe-section-title {
+      color: $primaryColor;
+      text-align: center;
+      margin: 5vh 0;
+  }
+
+   .icons {
+     text-align: center;
+     color: $primaryColor;
+
+      .icon-spacing {
+        padding: .6rem;
+        align-items: center;
+        color: inherit;
+
+      i.fab, i.fas, i.far {
+        &:hover {
+          cursor: pointer;
+          color: $accentColor;
+          text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+          transform: scale(1.3);
+          @include easeIO;
+        } 
+      } 
+    } 
+  } 
+}
+
+//CONTACT ME FORM
+  .form-wrapper {
+    form {
+      padding-bottom: 2rem;
+    }
+ 
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+
+      .form-item {
+        padding-bottom: 1.8rem;
+      }
+
+       input {
+          font-size: 1rem;
+          width: 500px;
+          height: 2rem;
+         
+
+         @include placeholder {
+          padding-left: .5rem;
+         }
+
+         &:focus {
+           outline: none;
+         }
+         
+        }
+
+       textarea {
+         font-size: 1rem;
+         width: 500px;
+         height: 5rem;
+
+          &:focus {
+           outline: none;
+         }
+       }
+      
+      label {
+        display: none;
+      }
+
+    }
+
+    button {
+     height: 2rem;
+     width: 500px;
+     font-size: 1rem;
+     background-color: $accentColor;
+     border: none;
+     letter-spacing: 1px;
+
+    }
+
+    .line {
+      margin: 2rem 0;
+    }
+  }       
+
+  //Success Message 
+.success {
+  width: 100vw;
+  height: 2rem;
+  font-size: 16px;
+  background-color: green;
+  color: darkgreen;
+}
+
+.sectionOtherWork {
+   height: 100vh;
+  background-color: $primaryColor;
+}
+

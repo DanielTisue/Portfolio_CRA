@@ -1,0 +1,28 @@
+
+button {
+  color: $secondaryColor;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid $secondaryColor;
+  text-align: center;
+  // border: none;
+  // border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+  // text-shadow: 1px 1px 1px white;
+  
+
+  &:hover {
+    box-shadow: 5px 5px 8px rgba(0,0,0,.5);
+    color: $secondaryColor;
+    background-color: $accentColor;
+    border: none;
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
+  }
+}

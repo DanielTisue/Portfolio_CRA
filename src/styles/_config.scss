@@ -1,0 +1,74 @@
+@import url('https://use.fontawesome.com/releases/v5.6.1/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+$primaryColor: #111517;
+$secondaryColor: #fff;
+$accentColor: #83d0f2;
+
+// #689bc4;
+
+
+
+.text-primary {
+  color: $primaryColor;
+}
+
+.text-secondary {
+  color: $secondaryColor;
+}
+
+.text-accent {
+  color: $accentColor;
+}
+
+@font-face {
+    font-family: 'fjallaone';
+    src: url('./fonts/fjallaone-regular-webfont.woff2') format('woff2'),
+         url('./fonts/fjallaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin easeOut {
+  transition: all .3s ease-out;
+}
+
+@mixin easeIn {
+  transition: all .3s ease-in;
+}
+
+@mixin easeIO {
+  transition: all .3s ease-in-out;
+}
+
+@mixin mediaXs {
+  @media screen and (max-width: 450px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 999px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content};
+    &:-moz-placeholder           {@content};
+    &::-moz-placeholder          {@content};
+    &:-ms-input-placeholder      {@content};  
+}
