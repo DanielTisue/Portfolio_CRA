@@ -22,9 +22,9 @@ class ContactForm extends Component {
   
   handleSubmit(e) {
 
-    const MAIL = process.env.REACT_APP_MAIL
-    const TEMP = process.env.REACT_APP_Temp
-    const USER = process.env.REACT_APP_USER
+    const MAIL = `${process.env.REACT_APP_MAIL}`;
+    const TEMP = `${process.env.REACT_APP_TEMP}`;
+    const USER = `${process.env.REACT_APP_USER}`;
 
     e.preventDefault()
     const {email, subject, message } = this.state
