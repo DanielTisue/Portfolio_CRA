@@ -634,11 +634,58 @@ a {
 
   //Success Message 
 .success {
-  width: 100vw;
-  height: 2rem;
-  font-size: 16px;
-  background-color: green;
-  color: darkgreen;
+  // background-color: rgb(131, 242, 208);
+  color: $secondaryColor;
+  // opacity: 1;
+  animation: color-me-in 5s;
+}
+
+@keyframes color-me-in {
+  0% {
+    background: rgb(131, 242, 208); 
+    opacity: .10;
+  }
+
+  10% {
+    background: rgb(131, 242, 208);
+    opacity: .20;
+  }
+
+  20% {
+    background: rgb(131, 242, 208);
+    opacity: .30;
+  }
+
+  30% {
+    background: rgb(131, 242, 208);
+    opacity: .40;
+  }
+
+  50% {
+    background: rgb(131, 242, 208);
+    opacity: .50;
+  }
+
+  60% {
+    background-color: rgb(131, 208, 242);
+    opacity: .65;
+  }
+
+  70% {
+    background-color: rgb(131, 208, 242);
+    opacity: .75;
+  }
+
+  80% {
+    background-color: rgb(131, 208, 242);
+    opacity: .85;
+
+  }
+
+  100% {
+   background-color: rgb(131, 208, 242);
+  opacity: .95;
+  }
 }
 
 .sectionOtherWork {

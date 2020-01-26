@@ -5,7 +5,7 @@ import '../../App.scss'
 
 
 class ContactForm extends Component {
-  state = {
+  state = { //asynchronous
     email: '',
     subject: '',
     message: '',
@@ -13,11 +13,16 @@ class ContactForm extends Component {
 
   constructor(props) {
     super(props);
-    this.alertSuccess = this.alertSuccess.bind(this);
+    this.state = { clicked: false };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  alertSuccess() {
-    setTimeout(function(){alert('Message Sent!');}, 200);
+  
+  handleClick(e) {
+   setTimeout(() => {
+     this.setState({ clicked : true });
+   }, 500) 
+   this.setState({ clicked: false });
   }
   
   handleSubmit(e) {
@@ -42,7 +47,6 @@ class ContactForm extends Component {
     )
    
    this.resetForm()
-   this.alertSuccess();
   }
 
   resetForm() {
@@ -93,8 +97,9 @@ class ContactForm extends Component {
                 onChange={this.handleChange.bind(this, 'message')}
               />
             </div>
-            <button variant="primary" type="submit">
-              Submit
+            <button variant="primary" type="submit" onClick={this.handleClick} className=
+            {`${this.state.clicked && "success"}`}>
+            {this.state.clicked ? 'Message Sent' : 'Submit' }
             </button>
           </form>
        <hr className="line" />
